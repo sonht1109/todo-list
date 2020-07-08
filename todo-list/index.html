@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="title">MY TODO LIST</div>
+
+    <div class="list-container">
+        <div class="list-title" style="font-weight: 800">My lists</div>
+        <ul class="my-list"></ul>
+        <div class="add-new-list">
+            <form action="" class="new-list-form">
+                <button class = "add-list">+</button>
+                <input type="text" placeholder="Add a new list" class = "new-list-input">
+            </form>
+        </div>
+    </div>
+    
+    <div class="task-container">
+        
+        <div class="top">
+            <div class="left"></div>
+            <div class="right">
+            </div>
+        </div>
+
+        <div class="list-tasks"></div>
+
+        <div class="add-new-task">
+            <form action="" class = "new-task-form">
+                <button class = "add-task">+</button>
+                <input type="text" placeholder="Add a new task" class = "new-task-input">
+            </form>
+        </div>
+
+        <div class="delete-button">
+            <button class = "delete-task delete">Delete completed tasks</button>
+            <button class = "delete-list delete">Delete list</button>
+        </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+*{padding: 0; margin: 0}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'consolas';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 114, 219);
+    user-select: none;
+}
+
+.title{
+    position: absolute;
+    z-index: 0;
+    color: rgb(37, 98, 179);
+    font-size: 100px;
+    font-weight: 800;
+    top: 0;
+}
+
+.list-container{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    color: white;
+    margin-left: 30px;
+}
+
+.list-container .list-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.list-container ul li.active-list{
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.list-container ul li{
+    cursor: pointer;
+    color: rgb(221, 221, 221);
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.task-container{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    box-shadow: 0px 5px 10px black;
+}
+
+button, input{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.top{
+    display: flex;
+    background-color: rgb(53, 52, 52);
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.top .left{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.list-tasks{
+    background-color: rgb(238, 237, 237);
+    padding: 0 30px;
+    overflow: auto;
+    max-height: 350px;
+}
+
+.list-tasks .task{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.list-tasks .task:after{
+    content: '';
+    width: 95%;
+    position: absolute;
+    bottom: -50%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.068);
+    height: 1px;
+}
+
+.list-tasks .check-button{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid rgba(26, 26, 26, 0.74);
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.list-tasks .check-button:checked{
+    background-color: rgba(26, 26, 26, 0.74);
+    border-color: transparent;
+    opacity: 0.5;
+}
+
+.list-tasks .check-button:checked ~ label{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.add-new-task .add-task,
+.add-new-list .add-list{
+    font-size: 20px;
+    color: rgb(19, 101, 255);
+    font-weight: 800;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.add-new-list .add-list{
+    color: white;
+}
+
+.add-new-task input,
+.add-new-list input{
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    cursor: text;
+}
+
+.add-new-list input{
+    border-color: white;
+    color: white;
+}
+
+.add-new-task{
+    padding: 20px 30px 30px 30px;
+    background-color: inherit;
+}
+
+::placeholder{
+    font-family: 'consolas';
+}
+
+.add-new-list input::placeholder{
+    color: white;
+}
+
+label{
+    cursor: pointer;
+}
+
+.delete-button{
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.delete-button .delete{
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+    font-size: 16px;
+}
